@@ -28,7 +28,7 @@ const MySchedule = () => {
                     </>
                     <Pressable style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', }}>
                         <Text style={{ fontSize: 16, color: colors.lightGreen }}>View More </Text>
-                        <Icon name="chevron-down" color={colors.lightGreen} size={14} />
+                        <Icon name="chevron-down" color={colors.lightGreen} size={14} style={{paddingTop:5}}/>
                     </Pressable>
 
                 </View>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { colors } from '../global/colors';
 
 const AvailabilityDetails = () => {
-    const [isAvailable, setAvailable] = useState(false);
+    const [isAvailable, setAvailable] = useState(true);
 
     const toggleSwitch = () => setAvailable((previousState) => !previousState);
 
@@ -12,7 +12,8 @@ const AvailabilityDetails = () => {
             <View style={styles.rowContainer}>
                 <View style={styles.imageContainer}>
                     <Image
-                        source={{ uri: 'https://picsum.photos/seed/picsum/50/50' }}
+                        // source={{ uri: 'https://picsum.photos/seed/picsum/50/50' }}
+                        source={require('../images/profileDemo.jpg')}
                         style={styles.image}
                     />
                     <View
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
     subtitle: {
         fontSize: 14,
         fontWeight: '500',
+        color:colors.grey2
     },
 });
 

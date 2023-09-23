@@ -34,14 +34,15 @@ const styles = StyleSheet.create({
     cardContainer: {
         width: '100%',
         aspectRatio: 2.8,
-        borderRadius: 5,
+        borderRadius: 8,
         overflow: 'hidden',
     },
     imageBackground: {
         flex: 1,
         resizeMode: 'cover',
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingHorizontal:10
     },
     textContainer: {
         padding: 10,
