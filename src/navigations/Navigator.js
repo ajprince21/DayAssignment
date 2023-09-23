@@ -22,7 +22,8 @@ function BottomTabs() {
                 name="HomeScreen"
                 component={HomeScreen}
                 options={{
-                    headerShown:false,
+                    headerShown: false,
+                    headerTitle: 'Home',
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="home-sharp" color={color} size={size} />
@@ -34,6 +35,7 @@ function BottomTabs() {
                 component={SessionScreen}
                 options={{
                     tabBarLabel: 'Session',
+                    headerTitle: 'Session',
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="videocam" color={color} size={size} />
                     ),
@@ -44,6 +46,7 @@ function BottomTabs() {
                 component={PerformanceScreen}
                 options={{
                     tabBarLabel: 'Performance',
+                    headerTitle: 'Performance',
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="pie-chart" color={color} size={size} />
                     ),
@@ -54,6 +57,7 @@ function BottomTabs() {
                 component={MoreScreen}
                 options={{
                     tabBarLabel: 'More',
+                    headerTitle: 'More',
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="ellipsis-horizontal" color={color} size={size} />
                     ),

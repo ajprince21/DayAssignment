@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import SessionCard from './SessionCard '
 import { colors } from '../global/colors'
 import Icon from 'react-native-vector-icons/Ionicons';
+import sessionData from '../global/sessionData';
 
 const MySchedule = () => {
     const [showSechedule, setShowSechedule] = useState(false)
@@ -16,8 +17,20 @@ const MySchedule = () => {
                 <Icon name="chevron-down" color={colors.lightGreen} size={16} />
             </Pressable>
             {showSechedule &&
-                <View style={{padding:12}}>
-                    <SessionCard />
+                <View style={{ padding: 12 }}>
+                    <Text style={{ color: colors.lightGreen }}>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</Text>
+                    <>
+                        {sessionData.map((item, index) => {
+                            return (
+                                <SessionCard data={item} key={index} />
+                            )
+                        })}
+                    </>
+                    <Pressable style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', }}>
+                        <Text style={{ fontSize: 16, color: colors.lightGreen }}>View More </Text>
+                        <Icon name="chevron-down" color={colors.lightGreen} size={14} />
+                    </Pressable>
+
                 </View>
 
             }
@@ -33,7 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.cardBackground,
         width: '100%',
         borderRadius: 5,
-        marginVertical:10
+        marginVertical: 10
     },
     header: {
         flexDirection: 'row',
